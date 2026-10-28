@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "bsadik.notes",
+  "name": "Notes",
+  "version": "1.0.0",
+  "author": "bsadik",
+  "description": "Todo list and scratchpad in the bar, stored as markdown in ~/Documents/notes",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Notes",
+    "description": "Todo list and scratchpad",
+    "category": "Info",
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "showTask": true,
+      "maxTaskChars": 28
+    },
+    "schema": [
+      {
+        "key": "showTask",
+        "type": "boolean",
+        "label": "Show the current task in the bar",
+        "defaultValue": true
+      },
+      {
+        "key": "maxTaskChars",
+        "type": "integer",
+        "label": "Longest task text shown in the bar",
+        "min": 8,
+        "max": 80,
+        "step": 1,
+        "defaultValue": 28
+      }
+    ]
+  }
+}
